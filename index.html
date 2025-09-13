@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Sun Travel - Kiến Tạo Kỷ Niệm Gia Đình Vô Giá</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F3EF; /* Kem */
+            color: #333333; /* Xám đậm */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .section-title {
+            font-size: 2.5rem; /* 40px */
+            line-height: 1.2;
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 3rem; /* 48px */
+            }
+        }
+        
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1511516412957-4b9a499342b3?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Custom Colors */
+        .text-brand-teal { color: #0D4742; }
+        .bg-brand-teal { background-color: #0D4742; }
+        .text-brand-gold { color: #B88A58; }
+        .bg-brand-gold { background-color: #B88A58; }
+        .border-brand-gold { border-color: #B88A58; }
+        .border-brand-teal { border-color: #0D4742; }
+        .bg-brand-cream { background-color: #F5F3EF; }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="bg-brand-cream/80 backdrop-blur-lg sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="block">
+                <img src="https://i.postimg.cc/SxscT0SM/Ch-t-logo.png" alt="Golden Sun Travel Logo" class="h-28 w-auto">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-brand-gold transition">Về chúng tôi</a>
+                <a href="#destinations" class="text-gray-700 hover:text-brand-gold transition">Điểm đến</a>
+                <a href="#journeys" class="text-gray-700 hover:text-brand-gold transition">Hành trình</a>
+                <a href="#contact" class="bg-brand-gold text-white px-5 py-2 rounded-full hover:opacity-90 transition">Thiết kế tour</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-brand-teal">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-700 hover:text-brand-gold">Về chúng tôi</a>
+            <a href="#destinations" class="block py-2 text-gray-700 hover:text-brand-gold">Điểm đến</a>
+            <a href="#journeys" class="block py-2 text-gray-700 hover:text-brand-gold">Hành trình</a>
+            <a href="#contact" class="block mt-2 bg-brand-gold text-white px-5 py-2 rounded-full text-center">Thiết kế tour</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg h-screen flex items-center justify-center text-white text-center">
+            <div class="bg-black/40 absolute inset-0"></div>
+            <div class="relative z-10 p-6">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4" style="font-family: 'Playfair Display', serif;">Kiến Tạo Kỷ Niệm Vô Giá</h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto">Golden Sun Travel chuyên thiết kế những hành trình riêng tư, độc bản dành riêng cho gia đình bạn tại những miền đất di sản của Việt Nam.</p>
+                <a href="#contact" class="mt-8 inline-block bg-brand-gold text-white px-8 py-3 rounded-full text-lg font-semibold hover:opacity-90 transition-transform hover:scale-105">Bắt đầu hành trình</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div id="about-slideshow" class="relative overflow-hidden rounded-lg shadow-xl w-full" style="padding-top: 66.66%;">
+                    <img src="https://i.postimg.cc/nrxMDBYk/MD1.jpg" alt="Đội ngũ Golden Sun Travel" class="slideshow-image-about absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
+                    <img src="https://i.postimg.cc/KYd1md1C/md2.jpg" alt="Đội ngũ Golden Sun Travel" class="slideshow-image-about absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                    <img src="https://i.postimg.cc/xdkkD01K/MD3.jpg" alt="Đội ngũ Golden Sun Travel" class="slideshow-image-about absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                    <img src="https://i.postimg.cc/3xfycyY8/MD4.jpg" alt="Đội ngũ Golden Sun Travel" class="slideshow-image-about absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                    <img src="https://i.postimg.cc/qML62bFC/MD5.jpg" alt="Đội ngũ Golden Sun Travel" class="slideshow-image-about absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                    <img src="https://i.postimg.cc/X73yGSsb/md6.jpg" alt="Đội ngũ Golden Sun Travel" class="slideshow-image-about absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                    <img src="https://i.postimg.cc/Njj9D8hC/MD7.jpg" alt="Đội ngũ Golden Sun Travel" class="slideshow-image-about absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                    <img src="https://i.postimg.cc/mZ7Hg2Nj/MD8.jpg" alt="Đội ngũ Golden Sun Travel" class="slideshow-image-about absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                    <img src="https://i.postimg.cc/W1yGJYDw/MD9.jpg" alt="Đội ngũ Golden Sun Travel" class="slideshow-image-about absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                </div>
+                <div>
+                    <h2 class="section-title text-brand-teal mb-4">Câu chuyện của chúng tôi</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Tại Golden Sun Travel, chúng tôi tin rằng du lịch không chỉ là đến một nơi nào đó, mà là cùng nhau tạo ra những khoảnh khắc đáng nhớ. Sứ mệnh của chúng tôi là "may đo" những chuyến đi hoàn hảo, nơi mỗi thành viên trong gia đình bạn đều tìm thấy niềm vui và sự gắn kết.</p>
+                    <p class="text-gray-600 leading-relaxed">Với đội ngũ chuyên gia bản địa am hiểu sâu sắc, chúng tôi mở ra những cánh cửa đến với văn hóa đích thực và những trải nghiệm độc quyền, biến kỳ nghỉ của bạn thành một di sản của gia đình.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Destinations Section -->
+        <section id="destinations" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-center text-brand-teal mb-12">Các Miền Đất Di Sản</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Destination Card: Nha Trang Slideshow -->
+                    <div id="nha-trang-slideshow" class="group relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://i.postimg.cc/mrPy32Pm/NT1.jpg" alt="Nha Trang" class="slideshow-image w-full h-full object-cover transition-opacity duration-1000 opacity-100">
+                        <img src="https://i.postimg.cc/jjBQM0Nt/NT2.jpg" alt="Nha Trang" class="slideshow-image absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        <img src="https://i.postimg.cc/gjWyPVN7/NT3.jpg" alt="Nha Trang" class="slideshow-image absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        <img src="https://i.postimg.cc/Hn9wWrNk/NT4.jpg" alt="Nha Trang" class="slideshow-image absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        <img src="https://i.postimg.cc/GhbP7jB8/NT6.jpg" alt="Nha Trang" class="slideshow-image absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        <img src="https://i.postimg.cc/15MGLN6W/NT7.jpg" alt="Nha Trang" class="slideshow-image absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <h3 class="absolute bottom-6 left-6 text-white text-3xl font-bold z-10" style="font-family: 'Playfair Display', serif;">Nha Trang</h3>
+                    </div>
+                     <!-- Destination Card: Da Lat Slideshow -->
+                     <div id="da-lat-slideshow" class="group relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://i.postimg.cc/zvssNP9r/DL1.jpg" alt="Đà Lạt" class="slideshow-image-dalat w-full h-full object-cover transition-opacity duration-1000 opacity-100">
+                        <img src="https://i.postimg.cc/25JRT62y/DL2.jpg" alt="Đà Lạt" class="slideshow-image-dalat absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        <img src="https://i.postimg.cc/ydZqGHbP/DL3.jpg" alt="Đà Lạt" class="slideshow-image-dalat absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        <img src="https://i.postimg.cc/VN5PjM92/DL4.jpg" alt="Đà Lạt" class="slideshow-image-dalat absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        <img src="https://i.postimg.cc/T3tXLQbr/DL5.jpg" alt="Đà Lạt" class="slideshow-image-dalat absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <h3 class="absolute bottom-6 left-6 text-white text-3xl font-bold z-10" style="font-family: 'Playfair Display', serif;">Đà Lạt</h3>
+                    </div>
+                     <!-- Destination Card: Buon Me Thuot Slideshow -->
+                     <div id="bmt-slideshow" class="group relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://i.postimg.cc/pTSfHhPJ/BM0.jpg" alt="Buôn Mê Thuột" class="slideshow-image-bmt w-full h-full object-cover transition-opacity duration-1000 opacity-100">
+                        <img src="https://i.postimg.cc/5txqqWPL/BM1.jpg" alt="Buôn Mê Thuột" class="slideshow-image-bmt absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        <img src="https://i.postimg.cc/MTH7NbJG/BM2.jpg" alt="Buôn Mê Thuột" class="slideshow-image-bmt absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        <img src="https://i.postimg.cc/Pq2bSVcc/BM3.jpg" alt="Buôn Mê Thuột" class="slideshow-image-bmt absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <h3 class="absolute bottom-6 left-6 text-white text-3xl font-bold z-10" style="font-family: 'Playfair Display', serif;">Buôn Mê Thuột</h3>
+                    </div>
+                     <!-- Destination Card: Pleiku Slideshow -->
+                     <div id="pleiku-slideshow" class="group relative overflow-hidden rounded-lg shadow-lg">
+                        <img src="https://i.postimg.cc/pLgQ4nXQ/PL1.png" alt="Pleiku" class="slideshow-image-pleiku w-full h-full object-cover transition-opacity duration-1000 opacity-100">
+                        <img src="https://i.postimg.cc/5N2mCVRz/PL2.jpg" alt="Pleiku" class="slideshow-image-pleiku absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        <img src="https://i.postimg.cc/pVZZrTqx/PL3.jpg" alt="Pleiku" class="slideshow-image-pleiku absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        <img src="https://i.postimg.cc/gjNqTSnr/PL4.jpg" alt="Pleiku" class="slideshow-image-pleiku absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <h3 class="absolute bottom-6 left-6 text-white text-3xl font-bold z-10" style="font-family: 'Playfair Display', serif;">Pleiku</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journeys Style Section -->
+        <section id="journeys" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title text-brand-teal mb-12">Phong Cách Hành Trình</h2>
+                <div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-20 w-20 mx-auto mb-4 bg-brand-gold/10 rounded-full">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h10a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.8 14.565l.223.223a2 2 0 002.828 0l2.828-2.829a2 2 0 012.828 0l.223.223M12 21v-3.333M4.2 4.2L4.2 4.2m15.6 0L19.8 4.2m-15.6 0A9 9 0 0112 3v0a9 9 0 017.8 7.8"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-teal mb-2">Thiên nhiên & Phiêu lưu</h3>
+                        <p class="text-gray-600">Khám phá những vườn quốc gia hùng vĩ, chèo thuyền kayak trên mặt hồ yên ả và hòa mình vào thiên nhiên trong lành.</p>
+                    </div>
+                    <div class="text-center">
+                         <div class="flex items-center justify-center h-20 w-20 mx-auto mb-4 bg-brand-gold/10 rounded-full">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-teal mb-2">Văn hóa & Di sản</h3>
+                        <p class="text-gray-600">Gặp gỡ các nghệ nhân tài hoa, tìm hiểu những làng nghề truyền thống và lắng nghe câu chuyện từ ngàn xưa vọng về.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="flex items-center justify-center h-20 w-20 mx-auto mb-4 bg-brand-gold/10 rounded-full">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-brand-teal mb-2">Nghỉ dưỡng & Tái tạo</h3>
+                        <p class="text-gray-600">Tận hưởng không gian riêng tư tại những resort biệt lập, thực hành yoga bên bờ biển hay thư giãn với các liệu pháp spa cao cấp.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Itinerary Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="section-title text-center text-brand-teal mb-4">Kiến Tạo Hành Trình Của Bạn</h2>
+                    <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Chia sẻ mong muốn của bạn, và Trợ lý AI của chúng tôi sẽ phác thảo một lịch trình độc đáo chỉ trong vài giây. Chuyên gia của Golden Sun Travel sẽ hoàn thiện nó cùng bạn.</p>
+                    
+                    <div class="bg-brand-cream p-8 rounded-lg shadow-xl border border-gray-200">
+                        <form id="ai-form">
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block mb-2 font-medium text-gray-700">Tên của bạn</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block mb-2 font-medium text-gray-700">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" required>
+                                </div>
+                                 <div>
+                                    <label for="duration" class="block mb-2 font-medium text-gray-700">Số ngày dự kiến</label>
+                                    <input type="number" id="duration" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" placeholder="Ví dụ: 5">
+                                </div>
+                                <div>
+                                    <label for="travelers" class="block mb-2 font-medium text-gray-700">Số người đi</label>
+                                    <input type="text" id="travelers" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" placeholder="Ví dụ: 2 người lớn, 1 trẻ em 8 tuổi">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="request" class="block mb-2 font-medium text-gray-700">Mô tả hành trình mơ ước của bạn</label>
+                                <textarea id="request" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" placeholder="Ví dụ: Gia đình tôi muốn một chuyến đi kết hợp nghỉ dưỡng biển Nha Trang và không khí mát mẻ của Đà Lạt. Chúng tôi thích các hoạt động ngoài trời nhẹ nhàng, ẩm thực địa phương đặc sắc và không gian riêng tư..."></textarea>
+                            </div>
+                            <div class="mt-8 text-center">
+                                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                                    <!-- AI Button -->
+                                    <button type="submit" class="bg-brand-gold text-white px-6 py-3 rounded-full text-lg font-semibold hover:opacity-90 transition-transform hover:scale-105 flex items-center justify-center w-full sm:w-auto">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 h-5 w-5"><path d="M12 3c-1.2 0-2.4.6-3 1.7A3.5 3.5 0 0 0 5.5 8c0 1.4.8 2.7 2 3.4c-1.2.7-2 2-2 3.4c0 1.1.4 2.1 1.1 2.9c.7.8 1.7 1.3 2.9 1.3s2.2-.5 2.9-1.3c.7-.8 1.1-1.8 1.1-2.9c0-1.4-.8-2.7-2-3.4c1.2-.7 2-2 2-3.4A3.5 3.5 0 0 0 15 4.7c-.6-1.1-1.8-1.7-3-1.7Z"/><path d="m12 14.5 1 2.5 2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1 1-2.5Z"/></svg>
+                                        Gợi ý Lịch trình bằng AI
+                                    </button>
+                                    <!-- Contact Button -->
+                                    <a href="#footer-contact" class="border-2 border-brand-teal text-brand-teal px-6 py-3 rounded-full text-lg font-semibold hover:bg-brand-teal hover:text-white transition-colors flex items-center justify-center w-full sm:w-auto">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 h-5 w-5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                        Liên hệ trực tiếp
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer-contact" class="bg-brand-teal text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-6 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4">Golden Sun Travel</h3>
+                    <p class="text-gray-300">Kiến tạo những kỷ niệm gia đình vô giá.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Liên kết nhanh</h4>
+                    <ul>
+                        <li class="mb-2"><a href="#about" class="hover:text-brand-gold">Về chúng tôi</a></li>
+                        <li class="mb-2"><a href="#destinations" class="hover:text-brand-gold">Điểm đến</a></li>
+                        <li class="mb-2"><a href="#journeys" class="hover:text-brand-gold">Hành trình</a></li>
+                    </ul>
+                </div>
+                 <div class="md:col-span-2">
+                    <h4 class="font-semibold text-lg mb-4">Liên hệ</h4>
+                    <p class="text-gray-300 mb-2">Email: info.goldensuntravels@gmail.com</p>
+                    <div class="flex items-center mb-2">
+                        <p class="text-gray-300"><strong>Công Luận:</strong> 0797 333 139</p>
+                        <a href="https://zalo.me/84797333139" target="_blank" rel="noopener noreferrer" class="ml-3 text-gray-300 hover:opacity-80 transition-opacity">
+                           <img src="https://i.postimg.cc/Y9gqYFTS/zalo-2.png" alt="Zalo" class="w-8 h-8">
+                        </a>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <p class="text-gray-300"><strong>Nhật Minh:</strong> 0865 1010 99</p>
+                        <a href="https://zalo.me/84865101099" target="_blank" rel="noopener noreferrer" class="ml-3 text-gray-300 hover:opacity-80 transition-opacity">
+                             <img src="https://i.postimg.cc/Y9gqYFTS/zalo-2.png" alt="Zalo" class="w-8 h-8">
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-lg mb-4 md:text-right">Theo dõi chúng tôi</h4>
+                    <div class="flex flex-col space-y-3 items-start md:items-end">
+                        <a href="#" class="hover:text-brand-gold transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="hover:text-brand-gold transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" class="hover:text-brand-gold transition-colors">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 12a4 4 0 1 0 4 4v-12a5 5 0 0 0 -5 5"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-gray-400">
+                <p>&copy; 2024 Golden Sun Travel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- AI Response Modal -->
+    <div id="ai-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-[100] hidden">
+        <div class="bg-white w-full max-w-3xl max-h-[90vh] rounded-lg shadow-2xl flex flex-col">
+            <div class="p-5 border-b flex justify-between items-center">
+                <h3 class="text-xl font-bold text-brand-teal flex items-center">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 h-6 w-6 text-brand-gold"><path d="M12 3c-1.2 0-2.4.6-3 1.7A3.5 3.5 0 0 0 5.5 8c0 1.4.8 2.7 2 3.4c-1.2.7-2 2-2 3.4c0 1.1.4 2.1 1.1 2.9c.7.8 1.7 1.3 2.9 1.3s2.2-.5 2.9-1.3c.7-.8 1.1-1.8 1.1-2.9c0-1.4-.8-2.7-2-3.4c1.2-.7 2-2 2-3.4A3.5 3.5 0 0 0 15 4.7c-.6-1.1-1.8-1.7-3-1.7Z"/><path d="m12 14.5 1 2.5 2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1 1-2.5Z"/></svg>
+                    Gợi ý Lịch trình từ AI
+                </h3>
+                <button id="close-modal-button" class="text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <div id="modal-content" class="p-8 overflow-y-auto">
+                <!-- Loading Spinner -->
+                 <div id="loading-spinner" class="text-center">
+                    <svg class="animate-spin h-10 w-10 text-brand-gold mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <p class="mt-4 text-gray-600">Trợ lý AI đang kiến tạo hành trình... Vui lòng chờ trong giây lát.</p>
+                </div>
+                 <!-- AI Response -->
+                 <div id="ai-response" class="prose max-w-none"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if(mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Header shadow on scroll
+            const header = document.getElementById('header');
+            if(header) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 10) {
+                        header.classList.add('shadow-md');
+                    } else {
+                        header.classList.remove('shadow-md');
+                    }
+                });
+            }
+
+            // Generic Slideshow Function
+            function initializeSlideshow(containerId, imageClass) {
+                const slideshowContainer = document.getElementById(containerId);
+                if (slideshowContainer) {
+                    const images = slideshowContainer.querySelectorAll(`.${imageClass}`);
+                    if (images.length > 0) {
+                        let currentImageIndex = 0;
+                        setInterval(() => {
+                            images[currentImageIndex].classList.remove('opacity-100');
+                            images[currentImageIndex].classList.add('opacity-0');
+                            currentImageIndex = (currentImageIndex + 1) % images.length;
+                            images[currentImageIndex].classList.remove('opacity-0');
+                            images[currentImageIndex].classList.add('opacity-100');
+                        }, 3000);
+                    }
+                }
+            }
+
+            // Initialize all slideshows
+            initializeSlideshow('nha-trang-slideshow', 'slideshow-image');
+            initializeSlideshow('da-lat-slideshow', 'slideshow-image-dalat');
+            initializeSlideshow('bmt-slideshow', 'slideshow-image-bmt');
+            initializeSlideshow('pleiku-slideshow', 'slideshow-image-pleiku');
+            initializeSlideshow('about-slideshow', 'slideshow-image-about');
+
+            
+            // Gemini AI Integration
+            const aiForm = document.getElementById('ai-form');
+            const aiModal = document.getElementById('ai-modal');
+            const closeModalButton = document.getElementById('close-modal-button');
+            
+            if(aiForm && aiModal && closeModalButton) {
+                aiForm.addEventListener('submit', getAIItinerarySuggestion);
+                closeModalButton.addEventListener('click', () => aiModal.classList.add('hidden'));
+            }
+
+            async function getAIItinerarySuggestion(event) {
+                event.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const duration = document.getElementById('duration').value;
+                const travelers = document.getElementById('travelers').value;
+                const request = document.getElementById('request').value;
+
+                if (!request) {
+                    alert('Vui lòng mô tả hành trình mơ ước của bạn.');
+                    return;
+                }
+                
+                const loadingSpinner = document.getElementById('loading-spinner');
+                const aiResponseContainer = document.getElementById('ai-response');
+
+                // Show modal with loading state
+                aiResponseContainer.innerHTML = '';
+                loadingSpinner.style.display = 'block';
+                aiModal.classList.remove('hidden');
+
+                const systemPrompt = `Bạn là một chuyên gia tư vấn du lịch cao cấp của công ty Golden Sun Travel. Bạn chuyên thiết kế các tour du lịch gia đình riêng tư, sang trọng và độc bản tại Việt Nam. Giọng văn của bạn phải chuyên nghiệp, ấm áp và truyền cảm hứng. Nhiệm vụ của bạn là tạo ra một bản gợi ý lịch trình chi tiết dựa trên yêu cầu của khách hàng. Luôn bắt đầu bằng lời chào cá nhân hóa đến tên khách hàng. Cấu trúc gợi ý phải rõ ràng, bao gồm các phần: "Chủ đề hành trình", "Điểm nhấn đặc biệt", và "Lịch trình gợi ý theo ngày". Hãy sáng tạo và đưa vào các hoạt động độc quyền, phù hợp với phong cách của Golden Sun Travel.`;
+
+                const userQuery = `
+                    Tên khách hàng: ${name}
+                    Số ngày dự kiến: ${duration} ngày
+                    Số lượng khách: ${travelers}
+                    Mô tả yêu cầu: "${request}"
+                    
+                    Dựa vào thông tin trên, hãy tạo một bản gợi ý lịch trình chi tiết.
+                `;
+                
+                const apiKey = ""; // API key will be provided by the environment
+                const apiUrl = `https://generativelace.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            contents: [{ parts: [{ text: userQuery }] }],
+                            systemInstruction: { parts: [{ text: systemPrompt }] },
+                        })
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`API error: ${response.statusText}`);
+                    }
+
+                    const result = await response.json();
+                    
+                    let itineraryText = "Rất tiếc, đã có lỗi xảy ra. Vui lòng thử lại.";
+                    if (result.candidates && result.candidates[0].content && result.candidates[0].content.parts[0].text) {
+                         itineraryText = result.candidates[0].content.parts[0].text;
+                    }
+                    
+                    // Simple Markdown to HTML conversion
+                    let htmlResponse = itineraryText
+                        .replace(/^### (.*$)/gim, '<h3 class="text-xl font-bold text-brand-teal mt-6 mb-2">$1</h3>')
+                        .replace(/^## (.*$)/gim, '<h2 class="text-2xl font-bold text-brand-teal mt-8 mb-4">$1</h2>')
+                        .replace(/^# (.*$)/gim, '<h1 class="text-3xl font-bold text-brand-teal mt-8 mb-4">$1</h1>')
+                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                        .replace(/\n/g, '<br>');
+
+                    aiResponseContainer.innerHTML = htmlResponse;
+
+                } catch (error) {
+                    console.error('Error calling Gemini API:', error);
+                    aiResponseContainer.innerHTML = `<p class="text-red-600">Đã có lỗi xảy ra khi kết nối với Trợ lý AI. Vui lòng kiểm tra lại thông tin hoặc thử lại sau. Lỗi: ${error.message}</p>`;
+                } finally {
+                    loadingSpinner.style.display = 'none';
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
+
+
