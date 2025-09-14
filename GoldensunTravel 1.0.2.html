@@ -36,7 +36,7 @@
         }
         
         .hero-bg {
-            background-image: url('https://i.postimg.cc/bvRTf2cW/top3.jpg');
+            background-image: url('https://i.postimg.cc/DZB4zvmC/top.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -294,7 +294,8 @@
     <main>
         <!-- Hero Section -->
         <section class="hero-bg h-screen flex items-center justify-center text-white text-center">
-            <div class="relative z-10 p-6" style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);">
+            <div class="bg-black/40 absolute inset-0"></div>
+            <div class="relative z-10 p-6">
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4" style="font-family: 'Playfair Display', serif;">Kiến Tạo Kỷ Niệm Vô Giá</h1>
                 <p class="text-lg md:text-xl max-w-2xl mx-auto">Golden Sun Travel chuyên thiết kế những hành trình riêng tư, độc bản dành riêng cho gia đình bạn tại những miền đất di sản của Việt Nam.</p>
                 <a href="#contact" class="mt-8 inline-block bg-brand-gold text-white px-8 py-3 rounded-full text-lg font-semibold hover:opacity-90 transition-transform hover:scale-105">Bắt đầu hành trình</a>
@@ -480,45 +481,45 @@
                     <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Chia sẻ mong muốn của bạn, và Trợ lý AI của chúng tôi sẽ phác thảo một lịch trình độc đáo chỉ trong vài giây. Chuyên gia của Golden Sun Travel sẽ hoàn thiện nó cùng bạn.</p>
                     
                     <div class="bg-brand-cream p-8 rounded-lg shadow-xl border border-gray-200">
-                        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <form id="ai-form">
                             <div class="grid md:grid-cols-2 gap-6 mb-6">
                                 <div>
                                     <label for="name" class="block mb-2 font-medium text-gray-700">Tên của bạn</label>
-                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" required>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" required>
                                 </div>
                                 <div>
                                     <label for="email" class="block mb-2 font-medium text-gray-700">Email</label>
-                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" required>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" required>
                                 </div>
                                  <div>
                                     <label for="duration" class="block mb-2 font-medium text-gray-700">Số ngày dự kiến</label>
-                                    <input type="number" id="duration" name="duration" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" placeholder="Ví dụ: 5">
+                                    <input type="number" id="duration" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" placeholder="Ví dụ: 5">
                                 </div>
                                 <div>
                                     <label for="travelers" class="block mb-2 font-medium text-gray-700">Số người đi</label>
-                                    <input type="text" id="travelers" name="travelers" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" placeholder="Ví dụ: 2 người lớn, 1 trẻ em 8 tuổi">
+                                    <input type="text" id="travelers" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" placeholder="Ví dụ: 2 người lớn, 1 trẻ em 8 tuổi">
                                 </div>
                                 <div class="md:col-span-2">
                                      <label for="phone" class="block mb-2 font-medium text-gray-700">Số điện thoại</label>
-                                     <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" placeholder="Để chúng tôi gọi lại tư vấn" required>
+                                     <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" placeholder="Để chúng tôi gọi lại tư vấn" required>
                                 </div>
                             </div>
                             <div class="mb-6">
                                 <label for="request" class="block mb-2 font-medium text-gray-700">Mô tả hành trình mơ ước của bạn</label>
-                                <textarea id="request" name="request" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" placeholder="Ví dụ: Gia đình tôi muốn một chuyến đi kết hợp nghỉ dưỡng biển Nha Trang và không khí mát mẻ của Đà Lạt. Chúng tôi thích các hoạt động ngoài trời nhẹ nhàng, ẩm thực địa phương đặc sắc và không gian riêng tư..."></textarea>
+                                <textarea id="request" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-brand-gold focus:border-brand-gold" placeholder="Ví dụ: Gia đình tôi muốn một chuyến đi kết hợp nghỉ dưỡng biển Nha Trang và không khí mát mẻ của Đà Lạt. Chúng tôi thích các hoạt động ngoài trời nhẹ nhàng, ẩm thực địa phương đặc sắc và không gian riêng tư..."></textarea>
                             </div>
                             <div class="mt-8 text-center">
                                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                     <!-- Submit Button -->
-                                    <button type="submit" class="bg-brand-teal text-white px-6 py-3 rounded-full text-lg font-semibold hover:opacity-90 transition-transform hover:scale-105 flex items-center justify-center w-full sm:w-auto order-1 sm:order-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 h-5 w-5"><path d="M22 2 11 13H2l3.5-6.5L2 2l20 0z"/><path d="m22 2-7 11-2-7 9-4z"/></svg>
-                                        Gửi Yêu Cầu Tư Vấn
-                                    </button>
                                     <!-- AI Button -->
-                                    <button type="button" id="ai-button" class="bg-brand-gold text-white px-6 py-3 rounded-full text-lg font-semibold hover:opacity-90 transition-transform hover:scale-105 flex items-center justify-center w-full sm:w-auto order-2 sm:order-1">
+                                    <button type="submit" class="bg-brand-gold text-white px-6 py-3 rounded-full text-lg font-semibold hover:opacity-90 transition-transform hover:scale-105 flex items-center justify-center w-full sm:w-auto">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 h-5 w-5"><path d="M12 3c-1.2 0-2.4.6-3 1.7A3.5 3.5 0 0 0 5.5 8c0 1.4.8 2.7 2 3.4c-1.2.7-2 2-2 3.4c0 1.1.4 2.1 1.1 2.9c.7.8 1.7 1.3 2.9 1.3s2.2-.5 2.9-1.3c.7-.8 1.1-1.8 1.1-2.9c0-1.4-.8-2.7-2-3.4c1.2-.7 2-2 2-3.4A3.5 3.5 0 0 0 15 4.7c-.6-1.1-1.8-1.7-3-1.7Z"/><path d="m12 14.5 1 2.5 2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1 1-2.5Z"/></svg>
                                         Gợi ý Lịch trình bằng AI
                                     </button>
+                                    <!-- Contact Button -->
+                                    <a href="#footer-contact" class="border-2 border-brand-teal text-brand-teal px-6 py-3 rounded-full text-lg font-semibold hover:bg-brand-teal hover:text-white transition-colors flex items-center justify-center w-full sm:w-auto">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 h-5 w-5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                        Liên hệ trực tiếp
+                                    </a>
                                 </div>
                             </div>
                         </form>
@@ -673,13 +674,12 @@
             initializeSlideshow('amiana-slideshow', 'slideshow-image-amiana');
             
             // Gemini AI Integration
-            const contactForm = document.getElementById('contact-form');
-            const aiButton = document.getElementById('ai-button');
+            const aiForm = document.getElementById('ai-form');
             const aiModal = document.getElementById('ai-modal');
             const closeModalButton = document.getElementById('close-modal-button');
             
-            if(aiButton && aiModal && closeModalButton) {
-                aiButton.addEventListener('click', getAIItinerarySuggestion);
+            if(aiForm && aiModal && closeModalButton) {
+                aiForm.addEventListener('submit', getAIItinerarySuggestion);
                 closeModalButton.addEventListener('click', () => aiModal.classList.add('hidden'));
             }
 
