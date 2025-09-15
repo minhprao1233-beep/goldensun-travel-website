@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Du Lịch Nha Trang Hấp Dẫn - Golden Sun Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F3EF; /* Kem - Giống trang chính */
+            color: #333333; /* Xám đậm */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-tagline {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        /* Màu sắc thương hiệu */
+        :root {
+            --brand-gold: #D97706; /* Vàng cam */
+            --brand-teal: #0891B2; /* Xanh mòng két */
+            --brand-cream: #F5F3EF; /* Kem */
+            --brand-dark: #333333; /* Xám đậm */
+        }
+        
+        .bg-brand-teal { background-color: var(--brand-teal); }
+        .text-brand-teal { color: var(--brand-teal); }
+        .bg-brand-gold { background-color: var(--brand-gold); }
+        .text-brand-gold { color: var(--brand-gold); }
+        .border-brand-gold { border-color: var(--brand-gold); }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1528543606781-df6e6807b3d0?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .tour-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="/goldenSuntravel.com.vn" class="flex items-center space-x-2">
+                    <div class="text-white bg-brand-gold p-2 rounded-full">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-bold text-brand-gold" style="font-family: 'Playfair Display', serif;">Golden Sun</span>
+                        <span class="text-sm text-brand-teal font-tagline -mt-1">Travel</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/goldenSuntravel.com.vn" class="text-gray-600 hover:text-brand-teal transition duration-300">Trang Chủ</a>
+                    <a href="#tours" class="text-brand-teal font-semibold border-b-2 border-brand-teal">Tour Nha Trang</a>
+                    <a href="#" class="text-gray-600 hover:text-brand-teal transition duration-300">Điểm Đến Khác</a>
+                    <a href="#" class="text-gray-600 hover:text-brand-teal transition duration-300">Về Chúng Tôi</a>
+                    <a href="#" class="text-gray-600 hover:text-brand-teal transition duration-300">Liên Hệ</a>
+                </nav>
+                <button class="md:hidden text-brand-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg h-[60vh] flex items-center justify-center text-white">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-4">Khám Phá Thiên Đường Biển</h1>
+                <p class="font-tagline text-4xl text-amber-300">Nha Trang</p>
+                <p class="text-lg md:text-xl mt-4 max-w-2xl mx-auto">Tận hưởng nắng vàng, biển xanh và những trải nghiệm không thể quên tại một trong những vịnh biển đẹp nhất thế giới.</p>
+            </div>
+        </section>
+
+        <!-- Tours Section -->
+        <section id="tours" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-brand-dark">Chương Trình Tour Đặc Sắc Tại Nha Trang</h2>
+                    <p class="text-lg text-gray-600 mt-2">Golden Sun Travel đã thiết kế sẵn những hành trình trọn vẹn nhất dành cho bạn.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tour Card 1: Tour 3 Đảo -->
+                    <div class="tour-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/600x400/34D399/FFFFFF?text=Tour+3+Đảo+VIP" alt="Tour 3 đảo Nha Trang" class="w-full h-56 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold text-brand-teal mb-2">Tour 3 Đảo VIP</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Khám phá vẻ đẹp của Vịnh Nha Trang với hành trình qua Hòn Mun, Làng Chài và Bãi Tranh. Tận hưởng lặn biển ngắm san hô và ẩm thực tươi ngon.</p>
+                            <ul class="text-gray-700 space-y-2 mb-6">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Lặn ngắm san hô đa sắc màu</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Bữa trưa hải sản trên bè</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Tham gia các trò chơi biển</li>
+                            </ul>
+                            <div class="mt-auto pt-4 border-t border-gray-200">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-xl font-bold text-brand-gold">650.000đ<span class="text-sm font-normal text-gray-500">/khách</span></p>
+                                    <a href="#" class="bg-brand-teal text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition duration-300">Đặt Tour</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour Card 2: 2 Ngày 1 Đêm -->
+                    <div class="tour-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/600x400/60A5FA/FFFFFF?text=Nha+Trang+2N1Đ" alt="Tour Nha Trang 2 ngày 1 đêm" class="w-full h-56 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold text-brand-teal mb-2">Kỳ Nghỉ 2 Ngày 1 Đêm</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Hành trình ngắn ngày khám phá trọn vẹn thành phố biển: từ các danh thắng nổi tiếng đến trải nghiệm tắm bùn khoáng thư giãn.</p>
+                            <ul class="text-gray-700 space-y-2 mb-6">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Tham quan Tháp Bà Ponagar, Chùa Long Sơn</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Thư giãn tại trung tâm bùn khoáng</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Tự do khám phá ẩm thực đêm</li>
+                            </ul>
+                            <div class="mt-auto pt-4 border-t border-gray-200">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-xl font-bold text-brand-gold">1.550.000đ<span class="text-sm font-normal text-gray-500">/khách</span></p>
+                                    <a href="#" class="bg-brand-teal text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition duration-300">Đặt Tour</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour Card 3: 3 Ngày 2 Đêm -->
+                    <div class="tour-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/600x400/FBBF24/FFFFFF?text=Nha+Trang+3N2Đ" alt="Tour Nha Trang 3 ngày 2 đêm" class="w-full h-56 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold text-brand-teal mb-2">Khám Phá Toàn Cảnh 3N2Đ</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Trải nghiệm đầy đủ nhất từ biển đảo, văn hóa, đến vui chơi giải trí. Bao gồm tour đảo và một ngày vui chơi tại VinWonders.</p>
+                            <ul class="text-gray-700 space-y-2 mb-6">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Bao gồm Tour 3 đảo VIP</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Vui chơi không giới hạn tại VinWonders</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Khám phá viện Hải Dương Học</li>
+                            </ul>
+                            <div class="mt-auto pt-4 border-t border-gray-200">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-xl font-bold text-brand-gold">2.890.000đ<span class="text-sm font-normal text-gray-500">/khách</span></p>
+                                    <a href="#" class="bg-brand-teal text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition duration-300">Đặt Tour</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to action -->
+        <section class="bg-white">
+            <div class="container mx-auto px-6 py-16 text-center">
+                 <h2 class="text-3xl font-bold text-brand-dark">Không Tìm Thấy Tour Phù Hợp?</h2>
+                 <p class="text-lg text-gray-600 mt-2 mb-6">Hãy để Golden Sun Travel thiết kế một hành trình riêng biệt cho gia đình bạn!</p>
+                 <a href="#" class="bg-brand-gold text-white font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition duration-300 text-lg">Yêu Cầu Tour Riêng</a>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Column 1: Brand -->
+                <div>
+                     <a href="#" class="flex items-center space-x-2 mb-4">
+                        <div class="text-brand-dark bg-white p-2 rounded-full">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-2xl font-bold text-white" style="font-family: 'Playfair Display', serif;">Golden Sun</span>
+                            <span class="text-sm text-gray-300 font-tagline -mt-1">Travel</span>
+                        </div>
+                    </a>
+                    <p class="text-gray-400">Kiến tạo những kỷ niệm gia đình vô giá qua những hành trình trọn vẹn và ý nghĩa.</p>
+                </div>
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liên Kết Nhanh</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Về chúng tôi</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Các điểm đến</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Blog du lịch</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Tours -->
+                 <div>
+                    <h4 class="text-lg font-semibold mb-4">Tour Phổ Biến</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Tour Nha Trang</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Tour Đà Lạt</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Tour Phú Quốc</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Tour Miền Tây</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Contact -->
+                 <div>
+                    <h4 class="text-lg font-semibold mb-4">Thông Tin Liên Hệ</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt w-5 mt-1"></i><span>123 Đường ABC, Phường XYZ, Quận 1, TP. Hồ Chí Minh</span></li>
+                        <li class="flex items-start"><i class="fas fa-phone-alt w-5 mt-1"></i><span>(+84) 987 654 321</span></li>
+                        <li class="flex items-start"><i class="fas fa-envelope w-5 mt-1"></i><span>contact@goldensuntravel.com.vn</span></li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 Golden Sun Travel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
+
