@@ -5,16 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour Du Lịch Nha Trang Hấp Dẫn - Golden Sun Travel</title>
+    
+    <!-- Favicon from index.html -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.postimg.cc/mgGYfSrZ/logokochu.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://i.postimg.cc/mgGYfSrZ/logokochu.png">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/mgGYfSrZ/logokochu.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Styles from index.html -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F5F3EF; /* Kem - Giống trang chính */
+            background-color: #F5F3EF; /* Kem */
             color: #333333; /* Xám đậm */
         }
 
@@ -26,7 +33,7 @@
             font-family: 'Dancing Script', cursive;
         }
         
-        /* Màu sắc thương hiệu */
+        /* Brand colors from index.html */
         :root {
             --brand-gold: #D97706; /* Vàng cam */
             --brand-teal: #0891B2; /* Xanh mòng két */
@@ -36,12 +43,13 @@
         
         .bg-brand-teal { background-color: var(--brand-teal); }
         .text-brand-teal { color: var(--brand-teal); }
+        .border-brand-teal { border-color: var(--brand-teal); }
         .bg-brand-gold { background-color: var(--brand-gold); }
         .text-brand-gold { color: var(--brand-gold); }
         .border-brand-gold { border-color: var(--brand-gold); }
 
-        .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1528543606781-df6e6807b3d0?q=80&w=1920&auto=format&fit=crop');
+        .hero-bg-nhatrang {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1590892875184-13531b41811e?q=80&w=1920&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
         }
@@ -59,31 +67,64 @@
 
 <body class="antialiased">
 
-    <!-- Header -->
+    <!-- Header from index.html -->
     <header class="bg-white/80 backdrop-blur-lg shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4">
+        <div class="container mx-auto px-6 py-2">
             <div class="flex items-center justify-between">
-                <a href="index.html" class="flex items-center space-x-2">
-                    <div class="text-white bg-brand-gold p-2 rounded-full">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="text-2xl font-bold text-brand-gold" style="font-family: 'Playfair Display', serif;">Golden Sun</span>
-                        <span class="text-sm text-brand-teal font-tagline -mt-1">Travel</span>
-                    </div>
+                <a href="index.html" class="flex items-center">
+                    <img src="https://i.postimg.cc/wv4d3Nkt/Ch-t-logo.png" alt="Golden Sun Travel Logo" class="h-16">
                 </a>
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="text-gray-600 hover:text-brand-teal transition duration-300">Trang Chủ</a>
-                    <a href="#tours" class="text-brand-teal font-semibold border-b-2 border-brand-teal">Tour Nha Trang</a>
-                    <a href="#" class="text-gray-600 hover:text-brand-teal transition duration-300">Điểm Đến Khác</a>
+                    <div class="relative group">
+                        <a href="#" class="text-gray-600 hover:text-brand-teal transition duration-300 inline-flex items-center">
+                            Tour du lịch
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+                        <div class="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-50 hidden group-hover:block transition-opacity duration-300">
+                           <div class="relative group/sub">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-teal flex justify-between items-center">Miền Bắc <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                                <div class="absolute left-full top-0 mt-0 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden group-hover/sub:block">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-teal">Hà Nội</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-teal">Vịnh Hạ Long</a>
+                                </div>
+                            </div>
+                            <div class="relative group/sub">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-teal flex justify-between items-center">Miền Trung <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                                <div class="absolute left-full top-0 mt-0 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden group-hover/sub:block">
+                                    <a href="nha-trang-tours.html" class="block px-4 py-2 text-sm text-brand-teal font-semibold">Nha Trang</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-teal">Đà Nẵng</a>
+                                </div>
+                            </div>
+                            <div class="relative group/sub">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-teal flex justify-between items-center">Miền Nam <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                                <div class="absolute left-full top-0 mt-0 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden group-hover/sub:block">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-teal">TP. Hồ Chí Minh</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-teal">Vũng Tàu</a>
+                                </div>
+                            </div>
+                            <div class="relative group/sub">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-teal flex justify-between items-center">Miền Tây <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                                <div class="absolute left-full top-0 mt-0 w-48 bg-white rounded-md shadow-lg py-1 z-50 hidden group-hover/sub:block">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-teal">Cần Thơ</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-brand-teal">Phú Quốc</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <a href="#" class="text-gray-600 hover:text-brand-teal transition duration-300">Về Chúng Tôi</a>
                     <a href="#" class="text-gray-600 hover:text-brand-teal transition duration-300">Liên Hệ</a>
                 </nav>
-                <button class="md:hidden text-brand-dark">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
+                <button id="mobile-menu-button" class="md:hidden text-brand-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
                 </button>
+            </div>
+             <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="index.html" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Trang Chủ</a>
+                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Tour du lịch</a>
+                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Về Chúng Tôi</a>
+                <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">Liên Hệ</a>
             </div>
         </div>
     </header>
@@ -91,7 +132,7 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="hero-bg h-[60vh] flex items-center justify-center text-white">
+        <section class="hero-bg-nhatrang h-[60vh] flex items-center justify-center text-white">
             <div class="text-center">
                 <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-4">Khám Phá Thiên Đường Biển</h1>
                 <p class="font-tagline text-4xl text-amber-300">Nha Trang</p>
@@ -108,27 +149,8 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Tour Card 1: Tour 3 Đảo -->
-                    <div class="tour-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                        <img src="https://placehold.co/600x400/34D399/FFFFFF?text=Tour+3+Đảo+VIP" alt="Tour 3 đảo Nha Trang" class="w-full h-56 object-cover">
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h3 class="text-2xl font-bold text-brand-teal mb-2">Tour 3 Đảo VIP</h3>
-                            <p class="text-gray-600 mb-4 flex-grow">Khám phá vẻ đẹp của Vịnh Nha Trang với hành trình qua Hòn Mun, Làng Chài và Bãi Tranh. Tận hưởng lặn biển ngắm san hô và ẩm thực tươi ngon.</p>
-                            <ul class="text-gray-700 space-y-2 mb-6">
-                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Lặn ngắm san hô đa sắc màu</li>
-                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Bữa trưa hải sản trên bè</li>
-                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Tham gia các trò chơi biển</li>
-                            </ul>
-                            <div class="mt-auto pt-4 border-t border-gray-200">
-                                <div class="flex items-center justify-between">
-                                    <p class="text-xl font-bold text-brand-gold">650.000đ<span class="text-sm font-normal text-gray-500">/khách</span></p>
-                                    <a href="#" class="bg-brand-teal text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition duration-300">Đặt Tour</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tour Card 2: 2 Ngày 1 Đêm -->
+                    
+                    <!-- Tour Card 1: 2 Ngày 1 Đêm -->
                     <div class="tour-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
                         <img src="https://placehold.co/600x400/60A5FA/FFFFFF?text=Nha+Trang+2N1Đ" alt="Tour Nha Trang 2 ngày 1 đêm" class="w-full h-56 object-cover">
                         <div class="p-6 flex flex-col flex-grow">
@@ -148,7 +170,7 @@
                         </div>
                     </div>
 
-                    <!-- Tour Card 3: 3 Ngày 2 Đêm -->
+                    <!-- Tour Card 2: 3 Ngày 2 Đêm -->
                     <div class="tour-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
                         <img src="https://placehold.co/600x400/FBBF24/FFFFFF?text=Nha+Trang+3N2Đ" alt="Tour Nha Trang 3 ngày 2 đêm" class="w-full h-56 object-cover">
                         <div class="p-6 flex flex-col flex-grow">
@@ -167,6 +189,47 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Tour Card 3: Tour 3 Đảo -->
+                    <div class="tour-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/600x400/34D399/FFFFFF?text=Tour+3+Đảo+VIP" alt="Tour 3 đảo Nha Trang" class="w-full h-56 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold text-brand-teal mb-2">Tour 3 Đảo VIP</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Khám phá vẻ đẹp của Vịnh Nha Trang với hành trình qua Hòn Mun, Làng Chài và Bãi Tranh. Tận hưởng lặn biển và ẩm thực tươi ngon.</p>
+                            <ul class="text-gray-700 space-y-2 mb-6">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Lặn ngắm san hô đa sắc màu</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Bữa trưa hải sản trên bè</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Tham gia các trò chơi biển</li>
+                            </ul>
+                            <div class="mt-auto pt-4 border-t border-gray-200">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-xl font-bold text-brand-gold">650.000đ<span class="text-sm font-normal text-gray-500">/khách</span></p>
+                                    <a href="#" class="bg-brand-teal text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition duration-300">Đặt Tour</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tour Card 4: Nha Trang - Đà Lạt -->
+                     <div class="tour-card bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/600x400/8B5CF6/FFFFFF?text=Nha+Trang+-+Đà+Lạt" alt="Tour Nha Trang - Đà Lạt" class="w-full h-56 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold text-brand-teal mb-2">Liên Tuyến Biển và Hoa 4N3Đ</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Hành trình kết hợp độc đáo giữa biển xanh Nha Trang và thành phố ngàn hoa Đà Lạt, mang đến những trải nghiệm đa dạng và thú vị.</p>
+                            <ul class="text-gray-700 space-y-2 mb-6">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Khám phá biển Nha Trang (2 ngày)</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Check-in các điểm "hot" tại Đà Lạt (2 ngày)</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i>Thưởng thức đặc sản 2 vùng miền</li>
+                            </ul>
+                            <div class="mt-auto pt-4 border-t border-gray-200">
+                                <div class="flex items-center justify-between">
+                                    <p class="text-xl font-bold text-brand-gold">3.990.000đ<span class="text-sm font-normal text-gray-500">/khách</span></p>
+                                    <a href="#" class="bg-brand-teal text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition duration-300">Đặt Tour</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -182,55 +245,52 @@
 
     </main>
     
-    <!-- Footer -->
+    <!-- Footer from index.html -->
     <footer class="bg-brand-dark text-white">
         <div class="container mx-auto px-6 py-12">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Column 1: Brand -->
-                <div>
-                     <a href="index.html" class="flex items-center space-x-2 mb-4">
-                        <div class="text-brand-dark bg-white p-2 rounded-full">
-                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
-                        </div>
-                        <div class="flex flex-col">
-                            <span class="text-2xl font-bold text-white" style="font-family: 'Playfair Display', serif;">Golden Sun</span>
-                            <span class="text-sm text-gray-300 font-tagline -mt-1">Travel</span>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Column 1: Logo & Intro -->
+                <div class="lg:col-span-1">
+                     <a href="index.html" class="block mb-4">
+                        <img src="https://i.postimg.cc/wv4d3Nkt/Ch-t-logo.png" alt="Golden Sun Travel Logo" class="h-16">
                     </a>
-                    <p class="text-gray-400">Kiến tạo những kỷ niệm gia đình vô giá qua những hành trình trọn vẹn và ý nghĩa.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">Golden Sun Travel tự hào là người bạn đồng hành đáng tin cậy, kiến tạo những kỷ niệm gia đình vô giá qua các hành trình trọn vẹn và ý nghĩa.</p>
                 </div>
-                <!-- Column 2: Quick Links -->
+                
+                <!-- Column 2: About Us -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Liên Kết Nhanh</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Về chúng tôi</a></li>
-                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Các điểm đến</a></li>
-                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Blog du lịch</a></li>
-                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Liên hệ</a></li>
+                    <h4 class="text-lg font-semibold mb-4 text-white tracking-wider">VỀ CHÚNG TÔI</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400 text-sm">Giới thiệu</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400 text-sm">Tin tức</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400 text-sm">Tạp chí du lịch</a></li>
                     </ul>
                 </div>
-                <!-- Column 3: Tours -->
+
+                <!-- Column 3: Services -->
                  <div>
-                    <h4 class="text-lg font-semibold mb-4">Tour Phổ Biến</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Tour Nha Trang</a></li>
-                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Tour Đà Lạt</a></li>
-                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Tour Phú Quốc</a></li>
-                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400">Tour Miền Tây</a></li>
+                    <h4 class="text-lg font-semibold mb-4 text-white tracking-wider">DỊCH VỤ</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400 text-sm">Tour trong nước</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400 text-sm">Tour nước ngoài</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400 text-sm">Cho thuê xe</a></li>
+                        <li><a href="#" class="hover:text-brand-gold transition duration-300 text-gray-400 text-sm">Đặt vé máy bay</a></li>
                     </ul>
                 </div>
+
                 <!-- Column 4: Contact -->
                  <div>
-                    <h4 class="text-lg font-semibold mb-4">Thông Tin Liên Hệ</h4>
-                    <ul class="space-y-3 text-gray-400">
-                        <li class="flex items-start"><i class="fas fa-map-marker-alt w-5 mt-1"></i><span>123 Đường ABC, Phường XYZ, Quận 1, TP. Hồ Chí Minh</span></li>
-                        <li class="flex items-start"><i class="fas fa-phone-alt w-5 mt-1"></i><span>(+84) 987 654 321</span></li>
-                        <li class="flex items-start"><i class="fas fa-envelope w-5 mt-1"></i><span>contact@goldensuntravel.com.vn</span></li>
+                    <h4 class="text-lg font-semibold mb-4 text-white tracking-wider">LIÊN HỆ</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt w-5 mt-1 text-brand-gold"></i><span>123 Đường ABC, Phường XYZ, Quận 1, TP. HCM</span></li>
+                        <li class="flex items-start"><i class="fas fa-phone-alt w-5 mt-1 text-brand-gold"></i><span>(+84) 987 654 321</span></li>
+                        <li class="flex items-start"><i class="fas fa-envelope w-5 mt-1 text-brand-gold"></i><span>contact@goldensuntravel.com.vn</span></li>
                     </ul>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    <h4 class="text-lg font-semibold mt-6 mb-4 text-white tracking-wider">KẾT NỐI VỚI CHÚNG TÔI</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-xl"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -239,10 +299,20 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Mobile menu script from index.html -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 </html>
+
 
 
 
