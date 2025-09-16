@@ -41,7 +41,7 @@
         }
         
         .hero-bg {
-            background-image: url('https://i.postimg.cc/bvRTf2cW/top3.jpg');
+            background-image: url('https://i.postimg.cc/FK6mTj9K/anh-bien-dep-nhat-the-gioi-094949065.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -299,10 +299,11 @@
     <main>
         <!-- Hero Section -->
         <section class="hero-bg h-screen flex items-center justify-center text-white text-center">
-            <div class="relative z-10 p-6" style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);">
+            <div class="relative z-10 p-6" style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);">
                 <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4" style="font-family: 'Playfair Display', serif;">Kiến Tạo Kỷ Niệm Vô Giá</h1>
                 <p class="text-lg md:text-xl max-w-2xl mx-auto">Golden Sun Travel chuyên thiết kế những hành trình riêng tư, độc bản dành riêng cho gia đình bạn tại những miền đất di sản của Việt Nam.</p>
-                <a href="#contact" class="mt-8 inline-block bg-brand-gold text-white px-8 py-3 rounded-full text-lg font-semibold hover:opacity-90 transition-transform hover:scale-105">Bắt đầu hành trình</a>
+                <p class="mt-8 text-lg md:text-xl max-w-3xl mx-auto font-semibold tracking-wider">TOUR • EVENT • RESORT • PRIVATE CAR • PLANE TICKET</p>
+                 <a href="#footer-contact" class="mt-8 inline-block bg-brand-gold text-white px-8 py-3 rounded-full text-lg font-semibold hover:opacity-90 transition-transform hover:scale-105">Liên hệ ngay</a>
             </div>
         </section>
 
@@ -467,10 +468,12 @@
                              <a href="#footer-contact" class="font-semibold text-brand-gold hover:underline">Yêu cầu báo giá &rarr;</a>
                         </div>
                     </div>
-                     <!-- Resort Card 4 -->
-                    <div class="bg-brand-cream rounded-lg shadow-lg overflow-hidden group">
-                        <div class="relative overflow-hidden">
-                            <img src="https://placehold.co/600x400/0D4742/FFFFFF?text=+" alt="Các resort khác trên toàn quốc" class="w-full h-56 object-cover group-hover:scale-100 transition-transform duration-500">
+                     <!-- Resort Card 4: Other Partners Slideshow -->
+                    <div id="other-partners-slideshow" class="bg-brand-cream rounded-lg shadow-lg overflow-hidden group">
+                        <div class="relative overflow-hidden h-56">
+                            <img src="https://i.postimg.cc/1tM330vy/1.png" alt="Các resort khác trên toàn quốc" class="slideshow-image-other absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100">
+                            <img src="https://i.postimg.cc/x84jKfr7/2.png" alt="Các resort khác trên toàn quốc" class="slideshow-image-other absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
+                            <img src="https://i.postimg.cc/50ftJKqP/3.png" alt="Các resort khác trên toàn quốc" class="slideshow-image-other absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0">
                         </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-bold text-brand-teal mb-2" style="font-family: 'Playfair Display', serif;">...Và nhiều đối tác khác</h3>
@@ -670,8 +673,75 @@
                     }
                 }
             }
+            
+            // Hero Slideshow Logic
+            const heroSlides = document.querySelectorAll('.hero-slide');
+            const slideDotsContainer = document.getElementById('slide-dots');
+            const prevButton = document.getElementById('prev-slide');
+            const nextButton = document.getElementById('next-slide');
+            let currentSlide = 0;
+            let slideInterval;
 
-            // Initialize all slideshows
+            function createDots() {
+                heroSlides.forEach((_, i) => {
+                    const dot = document.createElement('button');
+                    dot.classList.add('w-3', 'h-3', 'rounded-full', 'transition-colors');
+                    dot.classList.add(i === 0 ? 'bg-gray-800' : 'bg-gray-800/40');
+                    dot.addEventListener('click', () => {
+                        goToSlide(i);
+                        resetInterval();
+                    });
+                    slideDotsContainer.appendChild(dot);
+                });
+            }
+
+            function updateDots(index) {
+                const dots = slideDotsContainer.children;
+                for (let i = 0; i < dots.length; i++) {
+                    dots[i].classList.toggle('bg-gray-800', i === index);
+                    dots[i].classList.toggle('bg-gray-800/40', i !== index);
+                }
+            }
+
+            function goToSlide(slideIndex) {
+                heroSlides[currentSlide].classList.remove('opacity-100');
+                heroSlides[currentSlide].classList.add('opacity-0');
+                currentSlide = slideIndex;
+                heroSlides[currentSlide].classList.remove('opacity-0');
+                heroSlides[currentSlide].classList.add('opacity-100');
+                updateDots(currentSlide);
+            }
+
+            function nextSlide() {
+                const nextIndex = (currentSlide + 1) % heroSlides.length;
+                goToSlide(nextIndex);
+            }
+
+            function prevSlide() {
+                const prevIndex = (currentSlide - 1 + heroSlides.length) % heroSlides.length;
+                goToSlide(prevIndex);
+            }
+            
+            function resetInterval() {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 3000);
+            }
+
+            if (heroSlides.length > 0) {
+                 createDots();
+                prevButton.addEventListener('click', () => {
+                    prevSlide();
+                    resetInterval();
+                });
+                nextButton.addEventListener('click', () => {
+                    nextSlide();
+                    resetInterval();
+                });
+                slideInterval = setInterval(nextSlide, 3000);
+            }
+
+
+            // Initialize all other slideshows
             initializeSlideshow('nha-trang-slideshow', 'slideshow-image');
             initializeSlideshow('da-lat-slideshow', 'slideshow-image-dalat');
             initializeSlideshow('bmt-slideshow', 'slideshow-image-bmt');
@@ -680,6 +750,7 @@
             initializeSlideshow('vinpearl-slideshow', 'slideshow-image-vinpearl');
             initializeSlideshow('movenpick-slideshow', 'slideshow-image-movenpick');
             initializeSlideshow('amiana-slideshow', 'slideshow-image-amiana');
+            initializeSlideshow('other-partners-slideshow', 'slideshow-image-other');
             
             // Gemini AI Integration
             const contactForm = document.getElementById('contact-form');
