@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khám Phá Đà Lạt - Golden Sun Travel</title>
+    <!-- Standard Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://i.postimg.cc/mgGYfSrZ/logokochu.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://i.postimg.cc/mgGYfSrZ/logokochu.png">
+    <!-- Apple Touch Icon for iOS home screens -->
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/mgGYfSrZ/logokochu.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F3EF; /* Kem */
+            color: #333333; /* Xám đậm */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-tagline, .font-dancing {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .section-title {
+            font-size: 2.5rem; /* 40px */
+            line-height: 1.2;
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 3rem; /* 48px */
+            }
+        }
+        
+        /* Custom Colors */
+        .text-brand-teal { color: #0D4742; }
+        .bg-brand-teal { background-color: #0D4742; }
+        .text-brand-gold { color: #B88A58; }
+        .bg-brand-gold { background-color: #B88A58; }
+        .border-brand-gold { border-color: #B88A58; }
+        .border-brand-teal { border-color: #0D4742; }
+        .bg-brand-cream { background-color: #F5F3EF; }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="bg-brand-cream/80 backdrop-blur-lg sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex flex-col items-center">
+                <a href="index.html" class="block">
+                    <img src="https://i.postimg.cc/SxscT0SM/Ch-t-logo.png" alt="Golden Sun Travel Logo" class="h-28 w-auto">
+                </a>
+                <p class="font-tagline text-lg text-[#023047] font-bold -mt-2">Du Lịch & Trải Nghiệm</p>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html#about" class="text-gray-700 hover:text-brand-gold transition">Về chúng tôi</a>
+                
+                <!-- Tour Du Lich Dropdown -->
+                <div class="relative group">
+                    <button class="text-brand-gold font-semibold transition flex items-center">
+                        Tour du lịch
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 bg-brand-cream shadow-lg rounded-md mt-2 p-2 w-56 opacity-0 group-hover:opacity-100 transition-all duration-300 invisible group-hover:visible z-10">
+                        <!-- Miền Trung -->
+                        <div class="relative group/sub">
+                            <a href="#" class="flex justify-between items-center px-4 py-2 text-sm text-gray-700 hover:bg-brand-gold/10 hover:text-brand-gold rounded-md">
+                                Tour Miền Trung
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                            </a>
+                            <div class="absolute top-0 left-full bg-brand-cream shadow-lg rounded-md ml-1 p-2 w-56 opacity-0 group-hover/sub:opacity-100 transition-all duration-300 invisible group-hover/sub:visible">
+                                <a href="NhaTrang.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brand-gold/10 hover:text-brand-gold rounded-md">Nha Trang</a>
+                                <a href="dalat.html" class="block px-4 py-2 text-sm text-brand-gold bg-brand-gold/10 font-semibold rounded-md">Đà Lạt</a>
+                            </div>
+                        </div>
+                        <!-- Other regions can be added here -->
+                    </div>
+                </div>
+                <a href="#resorts" class="text-gray-700 hover:text-brand-gold transition">Khách sạn - Resort</a>
+                <a href="index.html#contact" class="bg-brand-gold text-white px-5 py-2 rounded-full hover:opacity-90 transition">Thiết kế tour</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-brand-teal">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+             <a href="index.html#about" class="block py-2 text-gray-700 hover:text-brand-gold">Về chúng tôi</a>
+            <!-- Mobile Tour Du Lich Dropdown -->
+            <div>
+                <button class="mobile-menu-toggle w-full text-left py-2 text-brand-gold font-semibold flex justify-between items-center">
+                    <span>Tour du lịch</span>
+                    <svg class="h-5 w-5 transition-transform rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </button>
+                <div class="mobile-submenu pl-4 border-l-2 border-brand-gold/20">
+                    <!-- Miền Trung -->
+                    <div>
+                        <button class="mobile-menu-toggle w-full text-left py-2 text-gray-700 hover:text-brand-gold flex justify-between items-center">
+                            <span>Tour Miền Trung</span>
+                            <svg class="h-5 w-5 transition-transform rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
+                        <div class="mobile-submenu pl-4 border-l-2 border-brand-gold/20">
+                           <a href="NhaTrang.html" class="block py-2 text-gray-700 hover:text-brand-gold">Nha Trang</a>
+                           <a href="dalat.html" class="block py-2 text-brand-gold font-semibold">Đà Lạt</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#resorts" class="block py-2 text-gray-700 hover:text-brand-gold">Khách sạn - Resort</a>
+            <a href="index.html#contact" class="block mt-2 bg-brand-gold text-white px-5 py-2 rounded-full text-center">Thiết kế tour</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[60vh] bg-cover bg-center" style="background-image: url('https://i.postimg.cc/T3tXLQbr/DL5.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+            <div class="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center text-white z-10" style="text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold">Khám Phá Đà Lạt</h1>
+                <p class="mt-4 text-lg md:text-2xl font-dancing">Thành phố ngàn hoa mộng mơ</p>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section class="py-16 md:py-20">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="section-title text-brand-teal mb-4">Chào Mừng Đến Với Đà Lạt</h2>
+                <p class="text-gray-600 leading-relaxed text-lg">
+                    Đà Lạt, viên ngọc quý của vùng cao nguyên Lâm Viên, từ lâu đã là điểm đến ao ước của du khách bởi khí hậu trong lành, mát mẻ quanh năm và cảnh sắc thiên nhiên thơ mộng. Nơi đây được mệnh danh là "Thành phố ngàn hoa", "Paris thu nhỏ" hay "Thành phố tình yêu", mỗi tên gọi đều gợi lên một vẻ đẹp riêng biệt, quyến rũ lòng người.
+                </p>
+            </div>
+        </section>
+
+        <!-- Destinations Section -->
+        <section id="destinations" class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-brand-teal text-center mb-12">Điểm Đến Nổi Bật</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Destination Card 1 -->
+                    <div class="bg-brand-cream rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://i.postimg.cc/zvssNP9r/DL1.jpg" alt="Hồ Xuân Hương" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-brand-teal mb-2">Hồ Xuân Hương</h3>
+                            <p class="text-gray-600">Trái tim của thành phố, nơi lý tưởng để dạo bộ, đạp xe và tận hưởng không khí trong lành. Vẻ đẹp của hồ thay đổi diệu kỳ theo từng thời khắc trong ngày.</p>
+                        </div>
+                    </div>
+                    <!-- Destination Card 2 -->
+                    <div class="bg-brand-cream rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://i.postimg.cc/ydZqGHbP/DL3.jpg" alt="Đỉnh Langbiang" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-brand-teal mb-2">Đỉnh Langbiang</h3>
+                            <p class="text-gray-600">Nóc nhà của Đà Lạt, nơi gắn liền với câu chuyện tình yêu huyền thoại. Từ đỉnh núi, bạn có thể chiêm ngưỡng toàn cảnh thành phố mờ ảo trong sương.</p>
+                        </div>
+                    </div>
+                    <!-- Destination Card 3 -->
+                    <div class="bg-brand-cream rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://i.postimg.cc/VN5PjM92/DL4.jpg" alt="Thác Datanla" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-brand-teal mb-2">Thác Datanla</h3>
+                            <p class="text-gray-600">Ngọn thác hùng vĩ với dòng nước tuôn trào trắng xóa. Đây còn là nơi trải nghiệm hệ thống máng trượt xuyên rừng dài nhất Đông Nam Á đầy thú vị.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tours Section -->
+        <section id="tours" class="py-16 md:py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-brand-teal text-center mb-12">Các Tour Hấp Dẫn</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tour Card 1 -->
+                    <div class="bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden flex flex-col">
+                        <img src="https://i.postimg.cc/25JRT62y/DL2.jpg" alt="Tour Săn Mây" class="w-full h-56 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold text-brand-teal mb-2">Tour Săn Mây Cầu Đất</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Hòa mình vào biển mây bồng bềnh và đón bình minh rực rỡ tại Đồi chè Cầu Đất.</p>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-sm text-gray-700">Thời gian: 1 ngày</span>
+                                <span class="text-xl font-bold text-brand-gold">450.000đ</span>
+                            </div>
+                            <a href="index.html#contact" class="w-full text-center border border-brand-gold text-brand-gold px-5 py-2 rounded-full hover:bg-brand-gold hover:text-white transition">Đặt Tour</a>
+                        </div>
+                    </div>
+                    <!-- Tour Card 2 -->
+                    <div class="bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden flex flex-col">
+                        <img src="https://i.postimg.cc/L8y2kPcN/dinh-doc-lap-o-dau-hcm-7.jpg" alt="Tour khám phá ngoại thành" class="w-full h-56 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold text-brand-teal mb-2">Khám Phá Ngoại Thành</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Ghé thăm những làng hoa truyền thống, các thác nước hùng vĩ và những quán cà phê view đồi núi cực chill.</p>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-sm text-gray-700">Thời gian: 1 ngày</span>
+                                <span class="text-xl font-bold text-brand-gold">550.000đ</span>
+                            </div>
+                            <a href="index.html#contact" class="w-full text-center border border-brand-gold text-brand-gold px-5 py-2 rounded-full hover:bg-brand-gold hover:text-white transition">Đặt Tour</a>
+                        </div>
+                    </div>
+                    <!-- Tour Card 3 -->
+                    <div class="bg-white rounded-lg border border-gray-200 shadow-md overflow-hidden flex flex-col">
+                        <img src="https://i.postimg.cc/W1yGJYDw/MD9.jpg" alt="Tour cắm trại" class="w-full h-56 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-2xl font-bold text-brand-teal mb-2">Cắm Trại Đêm & BBQ</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">Trải nghiệm một đêm đáng nhớ giữa thiên nhiên, quây quần bên lửa trại và thưởng thức tiệc BBQ ấm cúng.</p>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-sm text-gray-700">Thời gian: 2 ngày 1 đêm</span>
+                                <span class="text-xl font-bold text-brand-gold">1.200.000đ</span>
+                            </div>
+                            <a href="index.html#contact" class="w-full text-center border border-brand-gold text-brand-gold px-5 py-2 rounded-full hover:bg-brand-gold hover:text-white transition">Đặt Tour</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <section id="contact" class="py-16 md:py-20 bg-brand-teal text-white">
+             <div class="container mx-auto px-6 text-center">
+                 <h2 class="section-title font-bold mb-4">Sẵn Sàng Cho Chuyến Đi Đà Lạt?</h2>
+                 <p class="max-w-2xl mx-auto mb-8 text-lg">Hãy để Golden Sun Travel đồng hành cùng bạn và gia đình kiến tạo nên những kỷ niệm vô giá tại thành phố ngàn hoa.</p>
+                 <a href="index.html#contact" class="bg-brand-gold text-white px-8 py-3 rounded-full text-lg font-semibold hover:opacity-90 transition-transform hover:scale-105 inline-block">
+                     Thiết Kế Tour Ngay
+                 </a>
+             </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-teal text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="text-center mb-8">
+                <img src="https://i.postimg.cc/SxscT0SM/Ch-t-logo.png" alt="Golden Sun Travel Logo" class="h-32 mx-auto mb-2">
+                <p class="font-tagline text-xl text-white">Du Lịch & Trải Nghiệm</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-brand-gold">Về Chúng Tôi</h4>
+                    <p class="text-gray-300">Kiến tạo những kỷ niệm gia đình vô giá qua những chuyến du lịch ý nghĩa và trọn vẹn tại những miền đất di sản của Việt Nam.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-brand-gold">Liên Kết</h4>
+                    <ul>
+                        <li class="mb-2"><a href="index.html#about" class="text-gray-300 hover:text-white">Câu chuyện</a></li>
+                        <li class="mb-2"><a href="index.html#destinations" class="text-gray-300 hover:text-white">Điểm đến</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-gray-300 hover:text-white">Liên hệ</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="font-bold text-lg mb-4 text-brand-gold">Thông Tin Liên Hệ</h4>
+                    <p class="text-gray-300 mb-2">Email: contact@goldensun.vn</p>
+                    <p class="text-gray-300">Hotline: (+84) 901 234 567</p>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-white/20 pt-8 text-center text-gray-400 text-sm">
+                &copy; 2024 Golden Sun Travel. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile submenu toggles
+        const mobileMenuToggles = document.querySelectorAll('.mobile-menu-toggle');
+        mobileMenuToggles.forEach(button => {
+            button.addEventListener('click', (e) => {
+                // Stop link navigation if it's a submenu button
+                const submenu = button.nextElementSibling;
+                if (submenu && submenu.classList.contains('mobile-submenu')) {
+                   e.preventDefault();
+                }
+
+                const arrow = button.querySelector('svg');
+                if (submenu && submenu.classList.contains('mobile-submenu')) {
+                    submenu.classList.toggle('hidden');
+                    arrow.classList.toggle('rotate-180');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
